@@ -59,6 +59,7 @@ O backend é construído usando Node.js com Express e TypeScript.
    npm run dev
    ```
 
+
 ## Script de Extração
 
 **Repositório:** [pdf-extractor-script](https://github.com/erickhanon/pdf-extractor-script)
@@ -67,7 +68,7 @@ O script de extração é construído usando Python.
 
 ### Funcionalidades
 - Extração de dados de PDFs
-- Processamento e formatação dos dados extraídos
+- Envio dos dados extraídos para o backend
 
 ### Instalação e Execução
 1. Clone o repositório:
@@ -79,18 +80,21 @@ O script de extração é construído usando Python.
    ```bash
    python -m venv venv
    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-   pip install -r requirements.txt
+   pip install PyPDF2 requests
    ```
-3. Execute o script passando o caminho do PDF como argumento:
-   ```bash
-   python extract.py caminho/para/o/arquivo.pdf
+3. Estrutura de diretórios:
+   Certifique-se de que a estrutura de diretórios esteja da seguinte forma:
+   ```
+   pdf-extractor-script/
+   ├── pdf-extract.py
+   └── pdf/
+       └── seus-arquivos-pdf-aqui.pdf
    ```
 
-### Gerando `requirements.txt`
-Se você não tiver um `requirements.txt`, você pode gerá-lo com o comando:
-```bash
-pip freeze > requirements.txt
-```
+4. Execute o script:
+   ```bash
+   python pdf-extract.py
+   ```
 
 ## Banco de Dados
 
