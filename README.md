@@ -52,7 +52,7 @@ O backend é construído usando Node.js com Express e TypeScript.
    ```
 3. Configure as variáveis de ambiente no arquivo `.env`:
    ```env
-   DATABASE_URL=postgresql://admin:qwerty!@#123@localhost:5432/PDF_DB
+   DATABASE_URL="postgresql://admin:qwerty%21%40%23123@localhost:5432/PDF_DB"
    ```
 4. Execute o servidor:
    ```bash
@@ -90,23 +90,6 @@ O script de extração é construído usando Python.
 Se você não tiver um `requirements.txt`, você pode gerá-lo com o comando:
 ```bash
 pip freeze > requirements.txt
-```
-
-### Exemplo de script `extract.py` com `argparse`
-```python
-import argparse
-# Supondo que você tenha funções para extrair dados do PDF
-from pdf_extractor import extract_data
-
-def main(pdf_path):
-    data = extract_data(pdf_path)
-    print(data)
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Extrai dados de um PDF.")
-    parser.add_argument("pdf_path", type=str, help="Caminho para o arquivo PDF.")
-    args = parser.parse_args()
-    main(args.pdf_path)
 ```
 
 ## Banco de Dados
