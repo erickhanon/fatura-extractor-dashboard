@@ -138,12 +138,3 @@ volumes:
    ```bash
    docker-compose up -d
    ```
-
-## Conclusão
-
-Com todas as partes configuradas, o sistema de extração e visualização de faturas estará pronto para uso. Certifique-se de que todas as conexões entre os componentes estejam corretamente configuradas e que as variáveis de ambiente sejam ajustadas conforme necessário.
-
-### Perguntas para Melhorar o Sucesso do Projeto
-1. Como podemos melhorar a segurança das variáveis de ambiente no backend?
-2. Quais métricas seriam úteis para monitorar o desempenho do sistema?
-3. Como podemos otimizar a extração de dados de PDFs para diferentes formatos de fatura?
